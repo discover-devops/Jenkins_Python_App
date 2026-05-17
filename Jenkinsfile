@@ -6,12 +6,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/discover-devops/Jenkins_Python_App.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t python-flask-demo .'
